@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TAB NAV</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+<div class="container">
+  <section id='tab'>
+    <nav class="navbar">
+      <ul>
+        <li class="btn" onclick="openContent('lorem1')">TAB1</li>
+        <li class="btn" onclick="openContent('lorem2')">TAB2</li>
+        <li class="btn" onclick="openContent('lorem3')">TAB3</li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <article class="content" id='lorem1'>
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+      </article>
+      <article class="content" id="lorem2">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+      </article>
+      <article class="content" id="lorem3">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+      </article>
+    </main>
+  </section>
+</div>
+<script src='scripts/tab.js'></script>
+</body>
+</html>
