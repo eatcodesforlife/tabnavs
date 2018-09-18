@@ -9,59 +9,86 @@
     <link rel='stylesheet' href='css/style.css'>
   </head>
   <body>
-    <div class="container">
-      <section class='tab'>
-        <header id="basicTab">Basic Tab</header>
-        <nav class="navbar">
-          <ul>
-            <li class="btn" onclick="openContent('lorem1')">TAB1</li>
-            <li class="btn" onclick="openContent('lorem2')">TAB2</li>
-            <li class="btn" onclick="openContent('lorem3')">TAB3</li>
-          </ul>
-        </nav>
-        <main class="main-doc">
-          <article class="content" id='lorem1'>
-            <h2>Lorem</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
-          </article>
-          <article class="content" id="lorem2">
-            <h2>Lorem</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
-          </article>
-          <article class="content" id="lorem3">
-            <h2>Lorem</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
-          </article>
-        </main>
-      </section>
-      <section class="tab">
-        <header id="closableTab">Closable Tab</header>
-        <nav class="navbar">
-          <ul>
-            <li class="btn" onclick="closableTabs('lorem4')">TAB1</li>
-            <li class="btn" onclick="closableTabs('lorem5')">TAB2</li>
-            <li class="btn" onclick="closableTabs('lorem6')">TAB3</li>
-          </ul>
-        </nav>
-        <main class="main-doc">
-          <article class="closableContent" id='lorem4'>
-            <span class="closebtn" onclick='this.parentElement.style.display="none"'>&times;</span>
-            <h2>Lorem</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
-          </article>
-          <article class="closableContent" id="lorem5">
-            <span class="closebtn" onclick='this.parentElement.style.display="none"'>&times;</span>
-            <h2>Lorem</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
-          </article>
-          <article class="closableContent" id="lorem6">
-            <span class="closebtn" onclick='this.parentElement.style.display="none"'>&times;</span>
-            <h2>Lorem</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
-          </article>
-        </main>
-      </section>
-    </div>
+      <div class="container">
+        <section class='tab'>
+          <header id="basicTab">Basic Tab</header>
+          <nav class="navbar">
+            <ul>
+              <li class="btn" onclick="openContent('lorem1')">TAB1</li>
+              <li class="btn" onclick="openContent('lorem2')">TAB2</li>
+              <li class="btn" onclick="openContent('lorem3')">TAB3</li>
+            </ul>
+          </nav>
+          <main class="main-doc">
+            <article class="content" id='lorem1'>
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+            <article class="content" id="lorem2">
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+            <article class="content" id="lorem3">
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+          </main>
+        </section>
+        <section class="tab" id="closableTab">
+          <header>Closable Tab</header>
+          <nav class="navbar">
+            <ul>
+              <li class="btn" onclick="closableTabs('lorem4')">TAB1</li>
+              <li class="btn" onclick="closableTabs('lorem5')">TAB2</li>
+              <li class="btn" onclick="closableTabs('lorem6')">TAB3</li>
+            </ul>
+          </nav>
+          <main class="main-doc">
+            <article id='toCloseTabPageNote'>
+              <p>To close a tab, add <strong>onclick="this.parentElement.style.display='none'"</strong> to an element inside the tab container:</p>
+            </article>
+            <article class="closableContent" id='lorem4'>
+              <span class="closebtn" onclick='this.parentElement.style.display="none"'>&times;</span>
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+            <article class="closableContent" id="lorem5">
+              <span class="closebtn" onclick='this.parentElement.style.display="none"'>&times;</span>
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+            <article class="closableContent" id="lorem6">
+              <span class="closebtn" onclick='this.parentElement.style.display="none"'>&times;</span>
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+          </main>
+        </section>
+        <section class="tab" id="active_Current_Tabs">
+          <header>Active/Current Tabs</header>
+          <nav class="navbar">
+            <ul>
+              <li class="btn currentTab green" onclick="activeTab(event, 'lorem7')">TAB1</li>
+              <li class="btn currentTab" onclick="activeTab(event, 'lorem8')">TAB2</li>
+              <li class="btn currentTab" onclick="activeTab(event, 'lorem9')">TAB3</li>
+            </ul>
+          </nav>
+          <main class="main-doc">
+            <article class="selectedPage" id='lorem7'>
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+            <article class="selectedPage" id="lorem8">
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+            <article class="selectedPage" id="lorem9">
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, est?</p>
+            </article>
+          </main>
+        </section>
+      </div>
     <script src='scripts/tab.js'></script>
   </body>
 </html>
