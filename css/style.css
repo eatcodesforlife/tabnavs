@@ -43,6 +43,32 @@ article {
   margin: 0;
 }
 
+
+.pages-1 {
+  display: flex;
+  flex-direction: column;
+  background-color:#49c2a4;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages-2{
+  display: none;
+  flex-direction: column;
+  background-color:#35386f;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages-3 {
+  display: none;
+  flex-direction: column;
+  background-color:#e28968;
+  align-items: center;
+  justify-content: center;
+}
+
 /*navbar css*/
 nav {
 width: 100%;
@@ -82,56 +108,13 @@ main {
   margin-top: 0;
 }
 
-
-
-#lorem1 {
-  display: flex;
-  flex-direction: column;
-  background-color:#49c2a4;
-  align-items: center;
-  justify-content: center;
-}
-
-#lorem2{
-  display: none;
-  flex-direction: column;
-  background-color:#35386f;
-  align-items: center;
-  justify-content: center;
-}
-
-#lorem3 {
-  display: none;
-  flex-direction: column;
-  background-color:#e28968;
-  align-items: center;
-  justify-content: center;
-}
-
 /*closable tabs*/
-#lorem4 {
-  display: flex;
-  flex-direction: column;
-  background-color: #49c2a4;
-  align-items: center;
-}
-
-#lorem5 {
-  display: none;
-  flex-direction: column;
-  background-color:#35386f;
-  align-items: center;
-}
-
-#lorem6 {
-  display: none;
-  flex-direction: column;
-  background-color:#e28968;
-  align-items: center;
+#lorem4, #lorem5, #lorem6 {
+  justify-content: flex-start;
 }
 
 .closableContent h2 {
-  margin-top: 100px; /*this style is to create "justify-self: center" effect for the content*/
+  margin-top: 100px; /*this style is to create "justify-self: center" effect for the content without affecting the .closebtn*/
 }
 
 /*styling the documentation*/
@@ -146,26 +129,7 @@ main {
 
 /*Active/Current Tab */
 
-#lorem7 {
-  display: flex;
-  flex-direction: column;
-  background-color: #49c2a4;
-  align-items: center;
-  justify-content: center;
-}
-
-#lorem8 {
-  display: none;
-  flex-direction: column;
-  background-color:#35386f;
-  align-items: center;
-  justify-content: center;
-}
-
-#lorem9 {
-  display: none;
-  flex-direction: column;
-  background-color:#e28968;
-  align-items: center;
-  justify-content: center;
+.activetab {
+  background-color: #e5f9f0;
+  font-weight: 700;
 }

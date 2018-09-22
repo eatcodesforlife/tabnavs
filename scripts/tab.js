@@ -18,7 +18,7 @@ function closableTabs(tabpages){
 
 // active/current tab function
 
-function activeTab(evnt, currPage) {
+function activeTab(evnt, highlighted) {
   var currenttab;
   var pages = document.getElementsByClassName('selectedPage');
   for (i = 0; i < pages.length; i++) {
@@ -27,8 +27,8 @@ function activeTab(evnt, currPage) {
   //for dehighlighting inactive tabs
   currenttab = document.getElementsByClassName('currentTab');
   for(j = 0; j < currenttab.length; j++) {
-    currenttab[j].className = currenttab[j].className.replace("green", " ");
+    currenttab[j].className = currenttab[j].className.replace("activetab","");
   }
-  document.getElementById(currPage).style.display = "flex";
-  evnt.currentTarget.className += "green"; //this appends the color to active tab
+  document.getElementById(highlighted).style.display = "flex";
+  evnt.currentTarget.className += "activetab"; //this appends the color to active tab
 }
